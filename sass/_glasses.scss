@@ -79,10 +79,10 @@
     left: 11px;
     border-radius: 70px;
     background: -webkit-gradient(linear,left bottom,right top,color-stop(0.54, #FFF), color-stop(0.91, #AAA));
-    background: -webkit-linear-gradient(left bottom,right top, #FFF 54%,#AAA 91%);
-    background:    -moz-linear-gradient(left bottom,right top, #FFF 54%,#AAA 91%);
-    background:     -ms-linear-gradient(left bottom,right top, #FFF 54%,#AAA 91%);
-    background:      -o-linear-gradient(left bottom,right top, #FFF 54%,#AAA 91%);
+    background: -webkit-linear-gradient(to left bottom, #FFF 54%,#AAA 91%);
+    background:    -moz-linear-gradient(to left bottom, #FFF 54%,#AAA 91%);
+    background:     -ms-linear-gradient(to left bottom, #FFF 54%,#AAA 91%);
+    background:      -o-linear-gradient(to left bottom, #FFF 54%,#AAA 91%);
     background:         linear-gradient(to left bottom, #FFF 53%,#AAA 91%);
   }
 
@@ -91,5 +91,41 @@
   }
 }
 
+.iris {
+  width: 23px;
+  height: 23px;
+  position: relative;
+  top: -30px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: inset -2px -2px 5px 2px #222;
+  inset 2px 2px 1px 2px #7e4d49;
+  background: -webkit-radial-gradient(center, ellipse cover, #000 25%, #6f4a2d 34%, #c79067 44%, #6f4a2d 50%);
+  background: -moz-radial-gradient(center, ellipse cover, #000 25%, #6f4a2d 34%, #c79067 44%, #6f4a2d 50%);
+  z-index: 10;
 
+  //绘制眼球反光
+  &:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px #fff;
+    z-index: 11;
+  }
+}
+
+.iris-left {
+  left: 38px; // 调整眼球距离
+}
+
+.iris-right {
+  left: 23px; // 调整眼球距离
+}
 
